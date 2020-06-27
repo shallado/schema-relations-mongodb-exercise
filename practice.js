@@ -36,3 +36,36 @@ db.products.drop();
 
 // show all collections in current database
 db.products.find();
+
+// ------------------------------------------------
+// our database name will be shop
+// collection is products
+
+// add a new product with these fields name, price, details
+// make a field name available but its data not available
+db.products.insertOne({
+  name: 'shoes',
+  price: '55.00',
+  details: null
+});
+
+// ------------------------------------------------
+// collection numbers
+
+// insert a document into collection 
+db.numbers.insertOne({
+  a: 1
+});
+
+// find the document you just inserted
+db.numbers.findOne();
+
+// get the stats of your database
+db.stats();
+
+// store number value using NumberInt see the change in db.stats
+db.numbers.insertOne({
+  a: NumberInt(1)
+});
+
+// Compare data with and without using NumberInt analyze the differences
