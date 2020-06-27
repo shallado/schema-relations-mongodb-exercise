@@ -27,3 +27,12 @@ db.products.insertOne({
     cpu: 'Intel i7 8770'
   }
 });
+
+// drop database
+db.dropDatabase();
+
+// drop a single collection
+db.products.drop();
+
+// show all collections in current database
+db.products.find();
